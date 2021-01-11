@@ -42,7 +42,6 @@ class RestaurantServiceTest {
         //Arrange & Assert
         assertThrows(restaurantNotFoundException.class,()->service.findRestaurantByName("Saifee Kabab's House"));
 
-        //WRITE UNIT TEST CASE HERE
     }
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
 

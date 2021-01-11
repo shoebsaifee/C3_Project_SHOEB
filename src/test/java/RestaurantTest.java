@@ -87,35 +87,5 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
     }
-
-    //New Test Case to check if the total cost of all the items in the menu is equal to sum of the price of all the items
-    @Test
-    public void selecting_items_from_menu_and_checking_if_the_total_cost_is_equal_to_the_sum_of_price_of_all_items_added_in_the_menu(){
-
-        //Act
-        List<Item> selectedItems = new ArrayList<>();
-        Item temp = restaurant.findItemByName("Sweet corn soup");
-        if (temp!=null)
-            selectedItems.add(temp);
-        temp = restaurant.findItemByName("Vegetable lasagne");
-        if (temp!=null)
-            selectedItems.add(temp);
-        // Arrange
-        int totalCost = restaurant.getTotalCostOfItems(selectedItems);
-
-        // Assert
-        assertEquals(totalCost,300);
-
-        //Add more item and check the sum again
-        restaurant.addToMenu("Indori Kabab", 300);
-        temp = restaurant.findItemByName("Indori Kabab");
-        if (temp!=null)
-            selectedItems.add(temp);
-        totalCost = restaurant.getTotalCostOfItems(selectedItems);
-        assertEquals(totalCost,600);
-
-
-
-    }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
