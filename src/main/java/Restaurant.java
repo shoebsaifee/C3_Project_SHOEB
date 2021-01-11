@@ -67,4 +67,14 @@ public class Restaurant {
     }
 
 
+    //Method to compute Cost of all the Menu Items in a restaurant
+    public int getTotalCostOfItems(List<Item> selectedItems){
+        int totalCost = 0;
+        for(Item item: selectedItems) {
+            totalCost = totalCost + item.getPrice();
+        }
+        return  totalCost;
+
+
+    }
 }
